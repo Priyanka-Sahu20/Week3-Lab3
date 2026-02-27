@@ -4,7 +4,7 @@
   "description": "<img src=\"https://octodex.github.com/images/Professortocat_v2.png\" align=\"right\" height=\"200px\" />",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testMatch='**/?(*.)+(spec|test).js' --testPathIgnorePatterns=/node_modules/"
+    "test": "jest --testMatch='**/?(*.)+(spec|tests|test).js' --testPathIgnorePatterns=/node_modules/"
   },
   "repository": {
     "type": "git",
