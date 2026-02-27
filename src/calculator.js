@@ -8,6 +8,9 @@
  * - Subtraction (-)
  * - Multiplication (*)
  * - Division (/)
+ * - Modulo (%)
+ * - Exponentiation (^)
+ * - Square Root (sqrt)
  */
 
 // Addition operation
@@ -31,6 +34,27 @@ function divide(a, b) {
     throw new Error('Cannot divide by zero');
   }
   return a / b;
+}
+
+// Modulo operation - returns the remainder of a divided by b
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot perform modulo by zero');
+  }
+  return a % b;
+}
+
+// Exponentiation operation - returns base raised to the exponent
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+// Square root operation with error handling for negative numbers
+function squareRoot(n) {
+  if (n < 0) {
+    throw new Error('Cannot calculate square root of a negative number');
+  }
+  return Math.sqrt(n);
 }
 
 // Parse command line arguments
@@ -81,7 +105,7 @@ function main() {
 }
 
 // Export functions for testing
-module.exports = { add, subtract, multiply, divide };
+module.exports = { add, subtract, multiply, divide, modulo, power, squareRoot };
 
 // Run if executed directly
 if (require.main === module) {
